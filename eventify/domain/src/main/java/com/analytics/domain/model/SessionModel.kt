@@ -5,4 +5,5 @@ data class SessionModel(
     val sessionStartTime: Long,
     val sessionEndTime: Long,
     val sessionForegroundTime: Long,
+    val noOfReOpens: Int,
 )

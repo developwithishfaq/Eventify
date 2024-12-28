@@ -12,9 +12,9 @@ class EventifyDbManagerImpl : EventifyDbManager {
     override fun initializeDb(context: Context, config: DatabaseConfig) {
         if (database == null) {
             database = Room.databaseBuilder(
-                context,
-                EventifyDb::class.java,
-                config.databaseName
+                context = context,
+                klass = EventifyDb::class.java,
+                name = config.databaseName
             ).build()
         }
     }

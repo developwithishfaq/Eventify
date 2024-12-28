@@ -12,7 +12,7 @@ interface SessionDao {
     suspend fun upsertSessions(sessionEntity: SessionEntity): Long
 
     @Query("SELECT * FROM SessionEntity WHERE sessionId=:sessionId")
-    suspend fun getSessionById(sessionId: Int): SessionEntity?
+    suspend fun getSessionById(sessionId: String): SessionEntity?
 
 
 }

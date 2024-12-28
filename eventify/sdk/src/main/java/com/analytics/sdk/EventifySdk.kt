@@ -26,10 +26,10 @@ object EventifySdk {
 
     private fun initSessionTracker() {
         if (sessionTracker == null) {
-            sessionTracker = SessionTracker()
+            sessionTracker = EventifyDi.getSessionsRepository()
+                ?.let { SessionTracker(it, EventifyDi.getLogger()) }
         }
         sessionTracker?.init()
     }
-
 
 }

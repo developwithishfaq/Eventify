@@ -5,10 +5,10 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class SessionEntity(
-    @PrimaryKey(autoGenerate = true)
-    val id: Long,
+    @PrimaryKey
     val sessionId: String,
     val sessionStartTime: Long,
     val sessionEndTime: Long,
     val totalForegroundTime: Long,
+    val noOfReOpens: Int,
 )

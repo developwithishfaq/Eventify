@@ -6,11 +6,11 @@ import com.analytics.persistence.models.SessionEntity
 
 fun SessionModel.toSessionEntity(): SessionEntity {
     return SessionEntity(
-        -1,
         sessionId = sessionId,
         sessionStartTime = sessionStartTime,
         sessionEndTime = sessionEndTime,
-        totalForegroundTime = sessionForegroundTime
+        totalForegroundTime = sessionForegroundTime,
+        noOfReOpens = noOfReOpens
     )
 }
 
@@ -19,6 +19,7 @@ fun SessionEntity.toSessionModel(): SessionModel {
         sessionId = sessionId,
         sessionStartTime = sessionStartTime,
         sessionEndTime = sessionEndTime,
-        sessionForegroundTime = totalForegroundTime
+        sessionForegroundTime = totalForegroundTime,
+        noOfReOpens = noOfReOpens
     )
 }
